@@ -1,0 +1,581 @@
+*{box-sizing: border-box;margin: 0px;padding: 0px;}
+@font-face {
+    font-family:'prime';
+    src:url(Onest/static/Onest-Bold.ttf) ;
+}
+*{box-sizing: border-box;margin: 0px;padding: 0px;}
+@font-face {
+    font-family:'sec';
+    src:url(nunito/Nunito-BlackItalic.ttf) ;
+}
+
+body {  
+background-color: #001F3F !important; /* Soft navy */  
+color: #FFFFFF !important; /* White for text */  
+height: 2000px;
+font-family: 'prime';
+}  
+
+.navbar-custom {
+    margin: 30px 14px;
+    border-radius: 50px;
+    position: sticky; /* Navbar is sticky */
+    top: 30px; /* Initial top spacing */
+    z-index: 1000; /* Ensures navbar is above other content */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    border: 2px solid rgba(255, 8, 197, 0.7); /* 2px border with pink color */
+    backdrop-filter: blur(3px); /* Glassmorphism blur */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 8, 197, 0.3); /* Initial subtle pink shadow */
+    padding: 18px 80px ;
+}
+
+.navbar-custom:hover {
+    box-shadow: 0 8px 30px rgba(255, 8, 197, 0.7); /* Pink glow effect on hover */
+}
+.logo i {
+    /* background-image: linear-gradient(to right top, #ff08c5, #f33acf, #e751d6, #db61dc, #cf6fe0); */
+    color: white;
+    -webkit-background-clip: text;
+
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Smooth movement on hover */
+    font-size: 32px;
+    animation: moveUpDown 2s infinite ease-in-out; /* Continuous movement */
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Initial position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+}
+.company-name i{   animation: moveUpDown 2s infinite ease-in-out; /* Continuous movement */
+    font-size: 40px;color: white;font-family: 'prime';    display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Smooth movement on hover */
+
+}
+.company-name{padding-right: 20px;}
+.logo i:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    animation: none; /* Stop continuous movement on hover */
+}
+
+
+
+
+
+.navbar.scrolled {
+  margin: 0;
+  border-radius: 0;
+  top: 0; /* Navbar sticks to the top when scrolled */
+}
+
+.btn-custom {
+background-image: linear-gradient(to right top, #ff08c5, #f33acf, #e751d6, #db61dc, #cf6fe0);
+border-width: 2.5px;
+--tw-border-opacity: 1;
+  border-radius: 23px;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.clr-logo {
+    background-image: linear-gradient(to right top, #ff08c5, #f33acf, #e751d6, #db61dc, #cf6fe0);
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+    padding-right: 5px;
+    font-size: 40px; /* Adjust font size as needed */
+}
+
+
+/* Styles for slide-in navbar menu */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hide the slide menu outside of the viewport */
+    width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better depth */
+}
+
+/* Optional: Style for showing the menu when active */
+.slide-menu.active {
+    right: 0; /* Slide menu visible */
+}
+/* .container{border: 3px solid salmon;} */
+
+.slide-menu.open {
+  right: 0; /* Slide into the viewport */
+}
+
+.menu-close-btn {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.custom-toggler {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right top, #ff08c5, #f33acf, #e751d6, #db61dc, #cf6fe0);
+    background-size: 200% 100%; /* Ensures gradient covers the full width */
+    background-position: 0 0; /* Start position of gradient */
+    transition: background-position 0.3s ease; /* Smooth transition effect */
+}
+
+.bar:hover {
+    background-position: 100% 0; /* Change gradient position on hover for effect */
+}
+
+.custom-toggler.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.custom-toggler.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-toggler.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.desk-top-navlink{display: flex;justify-content: center;align-items: center;column-gap: 10px;}
+.mobile-navlink{display: flex;justify-content: center;align-items: center;row-gap:20px;flex-direction: column;}
+
+/* HERO SECTION  */
+.hero-container{min-height: 550px;padding: 50px;margin-block: 30px;}
+.hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure the hero-right section has height for positioning */
+}
+
+.master-img {
+    width: 100%;
+    max-width: 450px; /* Adjust the max-width as needed */
+    height: auto;
+    transform: rotate(6deg) scale(1.02); /* Slight rotation and scale */
+    transition: transform 0.4s ease-in-out; /* Smooth transformation */
+}
+
+.master-img:hover {
+    transform: rotate(0deg) scale(1.05); /* On hover, reset rotation and slightly increase scale */
+}
+
+.social-icons {
+    position: absolute;
+    width: 100%; /* Ensure it covers the entire right section for positioning */
+    height: 100%; /* Ensure it covers the entire right section for positioning */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    animation: move 2s infinite;
+    position: absolute;
+}
+
+.social-icons .top {
+    top: -11%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+}
+
+.social-icons .right {
+    top: 86%;
+    right: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.social-icons .bottom {
+    bottom: 3%;
+    left: 7%;
+    transform: translate(-50%, 50%);
+}
+
+.social-icons .left {
+    top: -12%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-6px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+
+.hero-left {
+    text-align: left; /* Center the text */
+    padding: 50px 5px;
+}
+
+.hero-left h1 {
+    font-size: 4rem; /* Large heading for a bold hero effect */
+    font-weight: 700;
+    color: #f33acf; /* Slightly adjust the pink color for a softer tone */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Keeps subtle shadow */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-left p {
+    font-size: 1.5rem; /* Larger paragraph text */
+    color: #fff; /* White text for better contrast */
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    margin: 0 auto; /* Centers the paragraph */
+}
+
+.hero-left h1:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}
+.btn-join-us {
+    display: inline-block;
+    padding: 0.8rem 4.4rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-image: linear-gradient(to right, #ff08c5, #f33acf, #e751d6, #db61dc, #cf6fe0);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-join-us:hover {
+    background-image: linear-gradient(to right, #ff08c5, #e751d6, #f33acf, #db61dc, #cf6fe0);
+    transform: translateX(10px); /* Slight movement on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* About  section */
+
+
+.about-section {
+    background-image: url('img/pexels-lulizler-3165335.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: fixed;
+    padding: 60px 0;
+    position: relative;
+
+  }
+  
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px); /* Creates the glass effect */
+    background-color:  #001f3faf ;/* Adds a white, slightly transparent overlay */
+    z-index: 1;
+  }
+  
+  .about-content {
+    position: relative;
+    z-index: 2;
+
+  }
+  .about-content h2 {
+    font-size: 3rem; /* Slightly bigger for a bold hero effect */
+    color: #ff08c5; /* Pink color from your design palette */
+    font-weight: 800; /* Extra bold for emphasis */
+    letter-spacing: 1.2px; /* Adds spacing between letters for elegance */
+    text-transform: uppercase; /* Capitalizes the heading */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-content h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #fff; /* A white underline effect */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.about-content p {
+    font-size: 1.3rem; /* Slightly larger paragraph text for readability */
+    color: #ffffffcc; /* White with slight transparency for subtle contrast */
+    margin-top: 25px;
+    line-height: 1.8; /* Increased line height for better readability */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*  SERVICES SECTION */
+
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Feature Card Styling */
+.feature-card {
+    padding: 30px;
+    background: linear-gradient(to right top, #ff08c5, #f33acf, #e751d6, #db61dc, #cf6fe0);
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Icon Styling */
+.feature-icon {
+    font-size: 3rem;
+    color: #001F3F;
+    transition: transform 0.3s ease;
+    animation: icon-move 2s ease-in-out infinite;
+}
+
+/* Hover Effects for Cards */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:hover .feature-icon {
+    transform: translateY(-5px);
+}
+
+/* Animation for Icons */
+@keyframes icon-move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+
+/* PRICING RULES */
+#pricing-section .hero-container{
+    min-height: auto !important;
+   
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Pricing Card Styles */
+
+.pricing-card {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Icon Styling */
+.pricing-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Gradient Backgrounds for Cards */
+.pricing-card-1 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.pricing-card-2 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.pricing-card-3 {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.pricing-card-4 {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Pricing Details */
+.pricing-details {
+    display: none;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Hover Effects */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TESTIMONLA SECTION */
+
+#testimonials {
+    background:rgb(255 20 147 / 75%);
+
+  }
+  
+  #testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for a refined look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+  
+  .testimonial-card p {
+    font-size: 1.1rem;
+    color: wheat;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-card h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    color:#001F3F ; /* Matches theme colors */
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+
+/* FOOTER FOR SITE */
+
+.footer {
+    background-color:#001F3F; /* Light background color */
+    padding: 20px 0; /* Vertical padding */
+    border-top: 1px solid #dee2e6; /* Subtle border at the top */
+}
+
+.footer-logo {
+    max-height: 50px; /* Adjust the logo size */
+    margin: 0 auto; /* Center the logo in its column */
+}
+
+.copyright {
+    color: #f33acf; /* Gray color for text */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    line-height: 47px;
+}
+
+  
+ 
+
+  
+
+
+
+

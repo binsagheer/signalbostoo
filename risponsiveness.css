@@ -1,0 +1,157 @@
+@media (min-width:992px) and (max-width:1200px) {
+    .hero-right {padding-top: 50px}
+    .hero-left h1{font-size: 3rem !important;}
+
+    }  
+@media (min-width:992px) {
+    .custom-toggler{display: none !important;}  
+    
+}
+    @media (max-width:992px) and (min-width:768px) {
+        .pricing-card{padding: 5px !important;}
+        .feature-card{height: 350px !important;}
+    .hero-left h1 { font-size: 2.1rem !important;
+    }
+    .hero-containe{margin-top: 60px !important;padding-inline: 5px;}
+    .master-img {margin-top: 50px !important;}
+
+    }
+    @media (max-width:992px) {
+        .testimonal-row{row-gap: 30px !important;}
+#features-section .hero-container{padding: 10px !important;}
+#pricing-section .hero-container{padding: 10px !important;}
+
+        .desk-top-navlink{display: none !important;}
+        
+    }
+    @media (max-width:768px) {
+        .footer .col-sm-12{display: flex !important;justify-content: center !important;}
+        .footer-logo {
+            display: block;
+            margin: 0 auto; /* Center logo on small screens */
+        }
+        
+        .text-md-end {
+            text-align: center; /* Center text on small screens */
+            margin-top: 10px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.6rem;
+        }
+    
+        .pricing-card .price {
+            font-size: 1.8rem;
+        }
+    
+        .pricing-details {
+            font-size: 0.9rem;
+        }
+        .feature-card {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 2.4rem;
+        }
+    
+        .feature-card h3 {
+            font-size: 1.6rem;
+        }
+    
+        .feature-card p {
+            font-size: 1rem;
+        }
+        #features-section .hero-container{padding: 30px !important;}
+        #pricing-sectionn .hero-container{padding: 30px !important;}
+        .feature-card {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 2.4rem;
+        }
+    
+        .feature-card h3 {
+            font-size: 1.6rem;
+        }
+    
+        .feature-card p {
+            font-size: 1rem;
+        }
+        .about-content h2 {
+            font-size: 2.2rem !important; /* Adjust for mobile */
+        }
+    
+        .about-content p {
+            font-size: 1.1rem !important;
+        }
+        #hero-row{row-gap:70px !important;}
+        .hero-container{padding: 40px 0px !important;}
+        .hero-left {padding: 0px !important;}
+        .navbar {
+          margin: 0;
+          border-radius: 0;
+        }
+      
+        .slide-menu {
+          width: 100%;
+          right: -100%; /* Adjust for full width on smaller screens */
+        }
+      
+        .slide-menu.open {
+          right: 0; /* Slide in from right */
+        }      
+        .btn-custom {
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+        /*  */
+        .navbar-custom{padding: 5px !important;}
+        .navbar-brand span i{font-size:28px !important;}
+        /*  */
+    
+        .hero-left h1 {
+            font-size: 3rem; /* Smaller heading on tablets */
+        }
+        .hero-left p {
+            font-size: 1.2rem; /* Slightly smaller paragraph on tablets */
+        }
+        
+        .hero-right {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .social-icons {
+            position: static;
+            margin-top: 20px;
+            flex-direction: row;
+            gap: 20px;
+        }
+    
+    
+      }
+
+  @media (max-width: 578px) {
+    .hero-left h1 {
+        font-size: 2.5rem !important; /* Smaller heading on mobile */
+    }
+    .hero-left p {
+        font-size: 1rem !important; /* Smaller paragraph on mobile */
+    }
+       .hero-container {padding: 50px 20px !important;}
+       .about-content h2 {
+        font-size: 1.8rem !important; /* Adjust for mobile */
+    }
+    .about-content p {
+        font-size: 0.5rem;font-weight: normal;line-height: normal !important;
+    }
+}
+@media (max-width: 425px) {
+    
+}
+  
